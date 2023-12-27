@@ -37,9 +37,9 @@ The Optical Character Recognition (OCR) project is a robust and versatile applic
 -After doing warping we have cropped our image to get better results.![Crop image](CropImg.PNG).
 -In order to eliminate the problem we were encountering initially with no boundary images. We have tested our image with random pixel area to detect only contour with largest area, if it does not we have implemented some if else conditions that if it dont it perform some basic operations like thresholding and equalizehist to increase the contrast of an image and make it more visible. If it does, let it perform some warping and concentrate in the text part of the image.![Thresholding and equalized Hist](BinaryThresholding.PNG).
  ### **Samples**
- -![image with boundary](imagewithboundary.PNG).
- -![image with no boundary](NoboundaryImg.PNG).
- -![image with bad quality](badqualityimage.PNG).
- -![Hand Written Image](HandWritten.PNG).
+-![image with boundary](imagewithboundary.PNG).
+-![image with no boundary](NoboundaryImg.PNG).
+-![image with bad quality](badqualityimage.PNG).
+-![Hand Written Image](HandWritten.PNG).
 
 ### **Thank You!**

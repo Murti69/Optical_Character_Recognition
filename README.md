@@ -25,7 +25,7 @@ The Optical Character Recognition (OCR) project is a robust and versatile applic
 - Navigate to **C++ -> Additional include directories** then add path to include headers such that **(E:\WXwidgets\include\msvc;E:\WXwidgets\include)**.
 - Navigate to **Linker->System** and change subsystem from console to windows.
 - Navigate to **Linker->General** then add path to additional library directories according to your system requirements such as **E:\WXwidgets\lib\vc_x64_lib** in case of x32, remember I build files for both x32 and x64. You can add any of each according to your personal requirements.
-- Then copy the code from this website if your wxWidget is working fine.(https://pastebin.com/9rb3bcyx).
+- Then copy the code from this website to test if your wxWidget is working fine.(https://pastebin.com/9rb3bcyx).
  ### **GUI and User Interface**
 - ![Graphical User Interface of OCR](GUI.PNG).
  ### **Procedure**

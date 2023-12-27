@@ -28,5 +28,18 @@ The Optical Character Recognition (OCR) project is a robust and versatile applic
 - Then copy the code from this website if your wxWidget is working fine.(https://pastebin.com/9rb3bcyx).
  ### **GUI and User Interface**
 -![Graphical User Interface of OCR](GUI.PNG).
+ ### **Procedure**
+-Initially we have perform some gaussian blur operation and Image grey operation to detect edges because when we perform gaussian blur, it decreases the intensity of image as a result sharp image get more visible comparatively to our original image.
+-After that we have perform some canny edge detection to detect the edges in the image.![Canny edge detection](cannyedgedetection.PNG)
+-Later on, we have perform dilation to increase the width of the edges such to perform other operations followed by dilation e.g. Warping to enhanced the visibility of text in the image.![Dilation](dilatedImage.PNG).
+-Then we perform dilation by taking vector of points in the image. Initially to detect the boundary we have faced some errors because text also do have edges so when we perform these operations our program also take those points into consideration so it was not providing the required result. That is why we need to be particular, so we implemented a condition that area must be greater than 1000 pixels, when we did it was giving better result but now we were not able to input images with no boundary. Ill discuss it letter following the procedure. ![Warp Image](WarpImg.PNG).
+-By implementing a getcontour function we have extracted the initial points of the boundary, when we implemented a draw points function in our boundary it was randomly allocating the points so in order to eliminate this we have perform some reorder function and got points accordingly. Then we have perform our warping.
+-After doing warping we have cropped our image to get better results.![Crop image](CropImg.PNG).
+-In order to eliminate the problem we were encountering initially with no boundary images. We have tested our image with random pixel area to detect only contour with largest area, if it does not we have implemented some if else conditions that if it dont it perform some basic operations like thresholding and equalizehist to increase the contrast of an image and make it more visible. If it does, let it perform some warping and concentrate in the text part of the image.![Thresholding and equalized Hist](BinaryThresholding.PNG).
+ ### **Samples**
+ -![image with boundary](imagewithboundary.PNG).
+ -![image with no boundary](NoboundaryImg.PNG).
+ -![image with bad quality](badqualityimage.PNG).
+ -![Hand Written Image](HandWritten.PNG).
 
 ### **Thank You!**
